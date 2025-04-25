@@ -1,0 +1,14 @@
+version: '3.8'
+services:
+  inlaks-facebok:
+    build: .
+    ports:
+      - "8061:8061"
+    volumes:
+      - .:/app
+    environment:
+      - PYTHONUNBUFFERED=1
+      # Add your other environment variables here
+      # - OPENAI_API_KEY=${OPENAI_API_KEY}
+      # - TAVILY_API_KEY=${TAVILY_API_KEY}
+      # etc...
